@@ -14,3 +14,11 @@
   height: 300px;
   object-fit: cover;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}

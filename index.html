@@ -19,6 +19,12 @@
   <!-- SECTION -->
   <header>
     <nav class="navbar navbar-dark navbar-expand bg-dark text-light px-2">
+      <div class="text-center">
+        <button class="btn btn-primary m-2 p-2 text-center type=" button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">
+          <i class="mdi mdi-menu fs-3"></i>
+        </button>
+      </div>
       <a class="navbar-brand" href="#">
         <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
           loading="lazy">
@@ -40,16 +46,40 @@
 
   <!-- SECTION -->
   <main class="container">
-    <!-- STUB house form -->
-
-    <!-- ------- -->
-
-    <!-- STUB houses listings -->
-
-
-    <!--  -->
-
-
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+      <div class="offcanvas-header">
+        <h3 id="offcanvasLeftLabel">List Your Items:</h3>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="p-2">
+          <p class="fw-bold text-start w-100 fs-5">Sell Your Car Now!!</p>
+          <button type="button" class="btn btn-primary text-center w-100" data-bs-spy="scroll"
+            data-bs-target="#create-car-form">
+            List Car
+            <button type="button" class="btn btn-primary text-center w-100 mt-2" data-bs-spy="scroll"
+              data-bs-target="#scrollToListing">
+              Buy Cars Here -><span class="mdi mdi-cart"></span>
+            </button>
+        </div>
+        <div class="p-2">
+          <p class="fw-bold text-start w-100 fs-5">Sell Your House Now!!</p>
+          <button type="button" class="btn btn-primary text-center w-100" data-bs-target="#create-car-form">
+            List House
+            <button type="button" class="btn btn-primary text-center w-100 mt-2" data-bs-target="#create-car-form">
+              Buy Houses Here -><span class="mdi mdi-cart"></span>
+            </button>
+        </div>
+        <div class="p-2">
+          <p class="fw-bold text-start w-100 fs-5">Promote Your Jobs Now!!</p>
+          <button type="button" class="btn btn-primary text-center w-100" data-bs-target="#create-car-form">
+            List Jobs
+            <button type="button" class="btn btn-primary text-center w-100 mt-2" data-bs-target="#create-car-form">
+              Checkout Jobs Here -><span class="mdi mdi-cart"></span>
+            </button>
+        </div>
+      </div>
+    </div>
     <!-- STUB Cars Form -->
     <form id="create-car-form" onsubmit="app.CarsController.postCar()"
       class="d-none row bg-white rounded p-3 shadow-sm my-3 g-3">
@@ -104,7 +134,7 @@
       </div>
     </form>
     <!-- STUB Cars listings -->
-    <h1>Wanna Buy A Car?</h1>
+    <h1 id="scrollToListing">Wanna Buy A Car?</h1>
     <hr>
     <section id="car-listings" class="row g-3">
 
